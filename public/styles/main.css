@@ -50,14 +50,9 @@ body {
 }
 
 #container {
-    width: 90vw;
-    max-width: 700px;
+    width: 90vw; /* largura */
+  
 }
 
-/*
-@media (min-width: 701px) {
-    :root {
-        font-size: 62.5%; - todo medida "rem" vai ser relativo a 10px 
-    }
-}
-*/
+
+
