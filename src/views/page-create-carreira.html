@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#8257e5">
+
+    <link rel="shortcut icon" href="/public/assets/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/public/styles/main.css"> 
+    <link rel="stylesheet" href="/public/styles/partials/header.css">
+    <link rel="stylesheet" href="/public/styles/partials/forms.css">
+    <link rel="stylesheet" href="/public/styles/partials/create-curso.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Poppins:wght@400;600&family=Roboto:wght@400;700&family=Ubuntu:wght@700&display=swap"  
+          rel="stylesheet">
+
+    <title>Proffy | Cadastro de Carreira</title>
+</head>
+<body id="page-give-classes">
+
+    <div id="container">
+        <header class="page-header">
+
+            <div class="top-bar-container">
+                <a href="/src/views/cadastro.html">
+                    <img src="/public/assets/icons/back.svg" alt="Voltar">
+                </a>
+                <img src="/public/assets/logo.svg" alt="logo proffy">
+            </div>
+
+            <div class="header-content">
+                <strong>Cadastro de Carreiras</strong>
+                <p>Preencha os campos com a descrição da Carreira</p>
+
+            </div>
+        </header>
+
+        <main>
+
+            <form action="" id="create-class" method="post">
+                <fieldset>
+
+                    <legend>Dados da Carreira</legend>
+
+                    <div class="input-block">
+                        <label for="name">Titulo/Nome da Carreira</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+
+                    <div class="textarea-block">
+                        <label for="bio">Descrição da Carreira</label>
+                        <textarea name="bio" id="bio" required></textarea>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="name">Linguagem Usada</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+
+                    <div class="textarea-block">
+                        <label for="bio">Bibliotecas e Ferramentas</label>
+                        <textarea name="bio" id="bio" required></textarea>
+                    </div>
+
+                    <div class="input-block">
+                        <label for="name">Salario</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                </fieldset>
+
+            </form>
+
+            <footer>
+                <p>
+                    <img src="/public/assets/icons/warning.svg" alt="aviso importante">
+                    Importante!<br>
+                    Preencha todos os dados
+                </p>
+                <button type="submit" form="create-class">Salvar Carreira</button>
+                
+            </footer>
+
+        </main>
+    </div>
+
+</body>
+</html>
