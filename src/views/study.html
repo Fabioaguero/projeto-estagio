@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#8257e5">
+
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/styles/main.css"> 
+    <link rel="stylesheet" href="/styles/partials/header.css">
+    <link rel="stylesheet" href="/styles/partials/forms.css">
+    <link rel="stylesheet" href="/styles/partials/page-study.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Poppins:wght@400;600&family=Roboto:wght@400;700&family=Ubuntu:wght@700&display=swap"  
+          rel="stylesheet">
+
+    <title>Proffy | Sua plataforma de estudos online</title>
+</head>
+<body id="page-study">
+
+    <div id="container">
+        <header class="page-header">
+
+            <div class="top-bar-container">
+                <a href="/">
+                    <img src="/assets/icons/back.svg" alt="Voltar">
+                </a>
+                <img src="/assets/logo.svg" alt="logo proffy">
+            </div>
+
+            <div class="header-content">
+                <strong>Esses são os proffys disponíveis</strong>
+
+                <form action="" id="search-teachers">
+                    <div class="select-block">
+                        <label for="area">Área</label>
+                        <select name="area" id="subject">
+                            <option value="" disabled="" hidden="">Selecione uma opção</option>
+                            <option value="0">Mobile</option>
+                            <option value="1">Back-end</option>
+                            <option value="2">Front-end</option>
+                            <option value="3">Full-stack</option>
+                            <option value="4">Ciências-de-Dados</option>
+                            <option value="5">DevOps</option>
+                            <option value="6">Cyber-Security</option>
+                            <option value="6">UX/UI</option>
+                            <option value="6">IOT</option>
+                        </select>
+                    </div>
+
+                    <div class="select-block">
+                        <label for="curso">Curso</label>
+                        <select name="curso" id="weekday">
+                            <option value="" disabled="" hidden="">Selecione uma opção</option>
+                            <option value="0">Soft-Skill</option>
+                            <option value="1">Tech</option>
+                            <option value="2">Empreendedorismo</option>
+                            <option value="3">Fluência-Digital</option>
+                        </select>
+                    </div>
+
+
+                    <div class="select-block">
+                        <label for="nivel">Nível</label>
+                        <select name="nivel" id="weekday">
+                            <option value="" disabled="" hidden="">Selecione uma opção</option>
+                            <option value="0">Básico</option>
+                            <option value="1">Intermediário</option>
+                            <option value="2">Avançado</option>
+                        </select>
+                    </div>
+
+                    <button type="submit">Filtrar</button>
+                </form>
+            </div>
+        </header>
+
+        <main>
+
+            {%for curso in cursos %}
+
+            <article class="teacher-item">
+                <header>
+                    <img src="/public/assets/Captura de tela 2021-12-06 120251.png" alt="Fabio aguero">
+                    <div>
+                        <strong>{{curso.title}}</strong>
+                        <span>{{curso.area}}</span>
+                    </div>
+                </header>
+                <p>{{curso.description}}</p>
+                <footer>
+                    <p>Nível<strong>{{curso.nivel}}</strong>
+                    </p>
+                    <p>Duração<strong>{{curso.time}}</strong>
+                    </p>
+                    <button type="button">
+                        <img src="/public/assets/icons/give-classes.svg" alt="acessar aula">
+                        Acessar aula
+                    </button>
+                </footer>
+            </article>
+
+            {%endfor%}
+        </main>
+    </div>
+
+</body>
+</html>
