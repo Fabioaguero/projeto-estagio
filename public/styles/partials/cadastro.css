@@ -96,6 +96,10 @@ body {
         grid-template-columns: 1fr 1fr;
       }
 
+      #career .cards{
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
      
       .container {
         padding: 10rem auto;
