@@ -80,7 +80,17 @@
 
                         <div class="input-block">
                             <label for="time-from">Duração do curso</label>
-                            <input type="time" neme="time-from[] required">
+                            <input type="time" neme="time-from[]" required>
+                        </div>
+
+                        <div class="select-block">
+                            <label for="weekday">Área do curso</label>
+                            <select name="weekday[]" required>
+                                <option value="" disabled="" hidden="">Selecione uma opção</option>
+                                <option value="0">Tech</option>
+                                <option value="1">Soff Skill</option>
+                                <option value="2">Avançado</option>
+                            </select>
                         </div>
 
                     </div>

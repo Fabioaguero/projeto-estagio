@@ -134,3 +134,10 @@
         font-size: 1.8rem;
     }
 }
+
+@media (max-width: 380px) {
+    .buttons-container a img {
+        width: 3rem;
+        margin-right: 1.3rem;
+    }
+}

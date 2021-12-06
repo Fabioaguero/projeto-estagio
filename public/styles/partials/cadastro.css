@@ -18,6 +18,7 @@ body {
 
 .section {
     padding-top: 10rem;
+    height: 80%;
 }
 
 .section .title {
@@ -36,6 +37,10 @@ body {
       padding: 10rem auto;
       margin-left: 3.5rem;
       margin-right: 3.5rem;
+  }
+
+  .container a {
+    text-decoration: none;
   }
 
 .grid {
@@ -70,10 +75,11 @@ body {
     color: var(--color-primary);
   }
   
-  .card .title {
+  .card a .title {
     font-size: 1.5rem;
     margin-bottom: 0.75rem;
-    color: var(--color-text-title)
+    color: var(--color-text-title);
+   
   }
 
 @media (min-width: 700px) {
@@ -84,18 +90,17 @@ body {
     #page-cadastro .page-header .header-content {
         margin-bottom: 0;
     }
+    
 
     .cards {
         grid-template-columns: 1fr 1fr;
       }
 
+     
       .container {
-        max-width: 1120px;
-        margin-left: 7rem;
-        margin-right: 7rem;
-      }
+        padding: 10rem auto;
+        margin-left: 3.5rem;
+        margin-right: 3.5rem;
+    }
     
-      .section {
-        padding: 8rem 0;
-      }
 }
