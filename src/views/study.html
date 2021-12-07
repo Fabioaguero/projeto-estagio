@@ -40,15 +40,11 @@
                         <label for="area">Área</label>
                         <select name="area" id="subject">
                             <option value="" disabled="" hidden="">Selecione uma opção</option>
-                            <option value="0">Mobile</option>
-                            <option value="1">Back-end</option>
-                            <option value="2">Front-end</option>
-                            <option value="3">Full-stack</option>
-                            <option value="4">Ciências-de-Dados</option>
-                            <option value="5">DevOps</option>
-                            <option value="6">Cyber-Security</option>
-                            <option value="6">UX/UI</option>
-                            <option value="6">IOT</option>
+                            {%for carreira in carreiras %}
+                                <option value="{{loop.index0}}">
+                                {{carreira}}
+                                </option>
+                                {%endfor%}
                         </select>
                     </div>
 
@@ -56,10 +52,11 @@
                         <label for="curso">Curso</label>
                         <select name="curso" id="weekday">
                             <option value="" disabled="" hidden="">Selecione uma opção</option>
-                            <option value="0">Soft-Skill</option>
-                            <option value="1">Tech</option>
-                            <option value="2">Empreendedorismo</option>
-                            <option value="3">Fluência-Digital</option>
+                            {%for categoria in categorias %}
+                                <option value="{{loop.index0}}">
+                                {{categoria}}
+                                </option>
+                                {%endfor%}
                         </select>
                     </div>
 
@@ -85,7 +82,7 @@
 
             <article class="teacher-item">
                 <header>
-                    <img src="/public/assets/Captura de tela 2021-12-06 120251.png" alt="Fabio aguero">
+                    <img src="/assets/Captura de tela 2021-12-06 120251.png" alt="Java Script">
                     <div>
                         <strong>{{curso.title}}</strong>
                         <span>{{curso.area}}</span>
@@ -97,10 +94,10 @@
                     </p>
                     <p>Duração<strong>{{curso.time}}</strong>
                     </p>
-                    <button type="button">
-                        <img src="/public/assets/icons/give-classes.svg" alt="acessar aula">
+                    <a class="button" href="{{curso.link}}" target="_blank" type="a">
+                        <img src="/assets/icons/give-classes.svg" alt="acessar aula">
                         Acessar aula
-                    </button>
+                    </a>
                 </footer>
             </article>
 

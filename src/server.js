@@ -55,12 +55,42 @@ const cursos = [{
     area:"Tech",
 }];
 
+const carreiras = [
+    "back-end",
+    "Front-end",
+    "FullStack",
+    "DevOps",
+    "Mobile",
+    "QA",
+    "UX/UI",
+    "Scrum Master",
+    "Administrador de Redes",
+    "Segurança da Informação",
+    "Ciêntista de Dados",
+    "BI/BA",
+    "Infraestrutura"
+];
+
+const categorias = [
+     "Empreendedorismo",
+     "Tech",
+     "Administrativa",
+     "Pessoal",
+     "Educação",
+     "Fluência Digital"
+];
+
+function getCarreira(carreiraNumber) {
+    const position = +carreiraNumber - 1
+    return carreiras[position]
+}; 
+
 function pageLanding(req, res) {return res.render("index.html")}
-function pageStudy(req, res) {return res.render("study.html", {cursos})}
+function pageStudy(req, res) {return res.render("study.html", {cursos, carreiras, categorias})}
 function pageCadastro(req, res) {return res.render("cadastro.html")}
-function pageCareer(req, res) {return res.render("career.html")}
-function pageCreateCareer(req, res) {return res.render("page-create-carrer.html")}
-function pageCreateClasses(req, res) {return res.render("page-create-classes.html")}
+function pageCareer(req, res) {return res.render("career.html", {carreiras, categorias})}
+function pageCreateCareer(req, res) {return res.render("page-create-career.html", {carreiras, categorias})}
+function pageCreateClasses(req, res) {return res.render("page-create-classes.html", {carreiras, categorias})}
 
 const express = require('express')
 const server = express()
