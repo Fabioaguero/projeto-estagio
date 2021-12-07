@@ -91,6 +91,7 @@ function pageCadastro(req, res) {return res.render("cadastro.html")}
 function pageCareer(req, res) {return res.render("career.html", {carreiras, categorias})}
 function pageCreateCareer(req, res) {return res.render("page-create-career.html", {carreiras, categorias})}
 function pageCreateClasses(req, res) {return res.render("page-create-classes.html", {carreiras, categorias})}
+function pageDescription(req, res) {return res.render("description-career.html")}
 
 const express = require('express')
 const server = express()
@@ -109,5 +110,6 @@ server.use(express.static("public"))
 .get("/create-classes", pageCreateClasses) 
 .get("/create-career", pageCreateCareer) 
 .get("/career", pageCareer) 
+.get("/description-career", pageDescription)
 
 .listen(5503)
